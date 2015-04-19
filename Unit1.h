@@ -9,14 +9,39 @@
 #include <Vcl.Forms.hpp>
 
 // ---------------------------------------------------------------------------
-class TForm1 : public TForm {
+
+ class HomeAnimal {
+
+};
+
+class ExpoAnimal : public HomeAnimal {
+
+};
+
+class BasicDog : public ExpoAnimal {
+
+};
+
+class WorkingDog : public BasicDog {
+
+};
+
+class FightingDog : public BasicDog {
+
+};
+
+class ToyDog : public BasicDog {
+
+};
+
+class TDogForm : public TForm {
 __published: // IDE-managed Components
 		private : // User declarations
-	public : // User declarations
-		__fastcall TForm1(TComponent* Owner);
+		public : // User declarations
+		__fastcall TDogForm(TComponent* Owner);
 };
 
 // ---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TDogForm *DogForm;
 // ---------------------------------------------------------------------------
 #endif

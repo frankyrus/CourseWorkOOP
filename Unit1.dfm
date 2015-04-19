@@ -1,7 +1,7 @@
-object Form1: TForm1
+object DogForm: TDogForm
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = #1057#1086#1073#1072#1082#1077#1085#1099
   ClientHeight = 242
   ClientWidth = 472
   Color = clBtnFace
