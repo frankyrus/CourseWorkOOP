@@ -18,8 +18,8 @@
        bool sourceOfMaterials;
        bool sourceOfFun;
        bool needHome;
-       AnsiString food;
-       AnsiString type;
+       String food;
+       String type;
 
        public:
               void setComfort()
@@ -46,26 +46,33 @@ class ExpoAnimal : public HomeAnimal {
        char appearance;
        char hair;
        char behavior;
-       AnsiString pedigree[3];
+       String pedigree[3];
 };
 
 class BasicDog : public ExpoAnimal {
-      AnsiString bred;
-
+      String bred;
+      char age;
 
       SetComfort();
-
 };
 
 class WorkingDog : public BasicDog {
+      String work;
+      String learnanble;
+      char workTime;
 
 };
 
 class FightingDog : public BasicDog {
+      char damage;
+      char averageFights;
+      char height;
+      char musculs;
 
 };
 
 class ToyDog : public BasicDog {
+      bool needMask;
 
 };
 
