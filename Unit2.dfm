@@ -58,8 +58,8 @@ object dogeAdd: TdogeAdd
   object Image1: TImage
     Left = 359
     Top = 8
-    Width = 105
-    Height = 105
+    Width = 99
+    Height = 99
   end
   object ComboBox1: TComboBox
     Left = 31
@@ -116,7 +116,7 @@ object dogeAdd: TdogeAdd
     TabOrder = 6
   end
   object Button1: TButton
-    Left = 341
+    Left = 335
     Top = 304
     Width = 123
     Height = 97
@@ -125,8 +125,8 @@ object dogeAdd: TdogeAdd
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 341
-    Top = 240
+    Left = 335
+    Top = 238
     Width = 123
     Height = 25
     Caption = #1042#1099#1073#1086#1088' '#1080#1079#1086#1073#1088#1072#1078#1077#1085#1080#1103
