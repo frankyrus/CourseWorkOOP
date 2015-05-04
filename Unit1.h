@@ -9,11 +9,17 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.Menus.hpp>
+#include <Vcl.Grids.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.ImgList.hpp>
+#include <Vcl.Dialogs.hpp>
+#include <jpeg.hpp>
 
 // ---------------------------------------------------------------------------
 
  class HomeAnimal {
-       int weight;
+	   int weight;
+	   int height;
        bool sourceOfFood;
        bool sourceOfMaterials;
        bool sourceOfFun;
@@ -65,8 +71,7 @@ class WorkingDog : public BasicDog {
 
 class FightingDog : public BasicDog {
       char damage;
-      char averageFights;
-      char height;
+	  char averageFights;
       char musculs;
 
 };
@@ -78,14 +83,28 @@ class ToyDog : public BasicDog {
 
 class TDogForm : public TForm {
 __published: // IDE-managed Components
-    TListView *ListView1;
     TMainMenu *MainMenu1;
     TMenuItem *A1;
     TMenuItem *Open1;
     TMenuItem *Save1;
     TMenuItem *N1;
     TMenuItem *Exit1;
-    void __fastcall Exit1Click(TObject *Sender);
+	TMenuItem *Help1;
+	TMenuItem *About1;
+	TMenuItem *Edit1;
+	TMenuItem *Add1;
+	TMenuItem *Delete1;
+	TTreeView *dogsTree;
+	TImageList *dogsImages;
+	TOpenDialog *OpenDialog1;
+	TSaveDialog *SaveDialog1;
+	TMenuItem *Cleartree1;
+	TMemo *Memo1;
+	void __fastcall Exit1Click(TObject *Sender);
+	void __fastcall Save1Click(TObject *Sender);
+	void __fastcall Open1Click(TObject *Sender);
+	void __fastcall Cleartree1Click(TObject *Sender);
+	void __fastcall Add1Click(TObject *Sender);
 		private : // User declarations
 		public : // User declarations
 		__fastcall TDogForm(TComponent* Owner);
