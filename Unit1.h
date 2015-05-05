@@ -14,6 +14,7 @@
 #include <Vcl.ImgList.hpp>
 #include <Vcl.Dialogs.hpp>
 #include <jpeg.hpp>
+#include <Vcl.ExtCtrls.hpp>
 
 // ---------------------------------------------------------------------------
 
@@ -100,12 +101,14 @@ __published: // IDE-managed Components
 	TSaveDialog *SaveDialog1;
 	TMenuItem *Cleartree1;
 	TMemo *Memo1;
+	TImage *Image1;
 
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);
 	void __fastcall Open1Click(TObject *Sender);
 	void __fastcall Cleartree1Click(TObject *Sender);
 	void __fastcall Add1Click(TObject *Sender);
+	void __fastcall dogsTreeChange(TObject *Sender, TTreeNode *Node);
 
 private: // User declarations
 		public : // User declarations
