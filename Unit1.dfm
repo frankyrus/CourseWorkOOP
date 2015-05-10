@@ -11594,6 +11594,7 @@ object DogForm: TDogForm
     Width = 321
     Height = 503
     Align = alLeft
+    HotTrack = True
     Images = dogsImages
     Indent = 5
     ShowLines = False
@@ -11638,10 +11639,11 @@ object DogForm: TDogForm
       end
       object Delete1: TMenuItem
         Caption = 'Delete'
+        OnClick = Delete1Click
       end
       object Cleartree1: TMenuItem
         Caption = 'Clear tree'
-        OnClick = init
+        OnClick = Clear1Click
       end
     end
     object Help1: TMenuItem

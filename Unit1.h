@@ -106,10 +106,11 @@ __published: // IDE-managed Components
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);
 	void __fastcall Open1Click(TObject *Sender);
-	void __fastcall init(TObject *Sender);
+	void __fastcall Clear1Click(TObject *Sender);
 	void __fastcall Add1Click(TObject *Sender);
 	void __fastcall dogsTreeChange(TObject *Sender, TTreeNode *Node);
 	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall Delete1Click(TObject *Sender);
 
 private: // User declarations
 		public : // User declarations
@@ -118,5 +119,8 @@ private: // User declarations
 
 // ---------------------------------------------------------------------------
 extern PACKAGE TDogForm *DogForm;
+extern TTreeNode * nodFight;
+extern TTreeNode * nodToy;
+extern TTreeNode * nodWork;
 // ---------------------------------------------------------------------------
 #endif
