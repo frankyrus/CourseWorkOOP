@@ -8,7 +8,6 @@
 // ---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TdogeAdd *dogeAdd;
 
 // ---------------------------------------------------------------------------
 __fastcall TdogeAdd::TdogeAdd(TComponent* Owner) : TForm(Owner) {
@@ -17,16 +16,13 @@ __fastcall TdogeAdd::TdogeAdd(TComponent* Owner) : TForm(Owner) {
 
 void __fastcall TdogeAdd::Button1Click(TObject *Sender) {
 	if (ComboBox1->ItemIndex == 0) {
-		DogForm->dogsTree->Items->AddChild(DogForm->dogsTree->Items->Item[0],
-			Edit1->Text);
+		DogForm->dogsTree->Items->AddChild(nodFight,Edit1->Text);
 	}
 	if (ComboBox1->ItemIndex == 1) {
-		DogForm->dogsTree->Items->AddChild(DogForm->dogsTree->Items->Item[1],
-			Edit1->Text);
+		DogForm->dogsTree->Items->AddChild(nodToy,Edit1->Text);
 	}
 	if (ComboBox1->ItemIndex == 2) {
-		DogForm->dogsTree->Items->AddChild(DogForm->dogsTree->Items->Item[2],
-			Edit1->Text);
+		DogForm->dogsTree->Items->AddChild(nodWork,Edit1->Text);
 	}
 	if (Edit2->Text != "") {
 		Memo1->Lines->Insert(0, "Продолжительность жизни: " + Edit2->Text);

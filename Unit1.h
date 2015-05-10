@@ -106,9 +106,10 @@ __published: // IDE-managed Components
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);
 	void __fastcall Open1Click(TObject *Sender);
-	void __fastcall Cleartree1Click(TObject *Sender);
+	void __fastcall init(TObject *Sender);
 	void __fastcall Add1Click(TObject *Sender);
 	void __fastcall dogsTreeChange(TObject *Sender, TTreeNode *Node);
+	void __fastcall FormCreate(TObject *Sender);
 
 private: // User declarations
 		public : // User declarations

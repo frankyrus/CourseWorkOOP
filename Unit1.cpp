@@ -9,21 +9,7 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TDogForm *DogForm;
-
-void init() {
-	DogForm->dogsTree->Items->Add(NULL, "Бойцовые");
-	DogForm->dogsTree->Items->Item[0]->ImageIndex = 0;
-	DogForm->dogsTree->Items->Item[0]->SelectedIndex = 3;
-	DogForm->dogsTree->Items->Add(NULL, "Декоративные");
-	DogForm->dogsTree->Items->Item[1]->ImageIndex = 1;
-	DogForm->dogsTree->Items->Item[1]->SelectedIndex = 3;
-	DogForm->dogsTree->Items->Add(NULL, "Служебные");
-	DogForm->dogsTree->Items->Item[2]->ImageIndex = 2;
-	DogForm->dogsTree->Items->Item[2]->SelectedIndex = 3;
-}
-
 //
-
 // ---------------------------------------------------------------------------
 __fastcall TDogForm::TDogForm(TComponent* Owner) : TForm(Owner) {
 }
@@ -60,10 +46,22 @@ void __fastcall TDogForm::Open1Click(TObject *Sender) {
 }
 // ---------------------------------------------------------------------------
 
-void __fastcall TDogForm::Cleartree1Click(TObject *Sender) {
-	dogsTree->Items->Clear();
-	init();
-
+void __fastcall TDogForm::init(TObject *Sender) {
+	if (MessageDlg("Вы действительно хотите очистить каталог?",mtConfirmation,TMsgDlgButtons() << mbOK << mbCancel,0)== mrOk)
+		{
+		DogForm->dogsTree->Items->Clear();
+		DogForm->dogsTree->Items->Add(NULL, "Бойцовые");
+		DogForm->dogsTree->Items->Item[0]->ImageIndex = 0;
+		DogForm->dogsTree->Items->Item[0]->SelectedIndex = 3;
+		DogForm->dogsTree->Items->Add(NULL, "Декоративные");
+		DogForm->dogsTree->Items->Item[1]->ImageIndex = 1;
+		DogForm->dogsTree->Items->Item[1]->SelectedIndex = 3;
+		DogForm->dogsTree->Items->Add(NULL, "Служебные");
+		DogForm->dogsTree->Items->Item[2]->ImageIndex = 2;
+		DogForm->dogsTree->Items->Item[2]->SelectedIndex = 3;
+		Memo1->Visible=false;
+        Image1->Visible=false;
+		}
 }
 // ---------------------------------------------------------------------------
 
@@ -87,3 +85,18 @@ void __fastcall TDogForm::dogsTreeChange(TObject *Sender, TTreeNode *Node) {
 	}
 }
 // ---------------------------------------------------------------------------
+void __fastcall TDogForm::FormCreate(TObject *Sender)
+{
+		DogForm->dogsTree->Items->Clear();
+		DogForm->dogsTree->Items->Add(NULL, "Бойцовые");
+		DogForm->dogsTree->Items->Item[0]->ImageIndex = 0;
+		DogForm->dogsTree->Items->Item[0]->SelectedIndex = 3;
+		DogForm->dogsTree->Items->Add(NULL, "Декоративные");
+		DogForm->dogsTree->Items->Item[1]->ImageIndex = 1;
+		DogForm->dogsTree->Items->Item[1]->SelectedIndex = 3;
+		DogForm->dogsTree->Items->Add(NULL, "Служебные");
+		DogForm->dogsTree->Items->Item[2]->ImageIndex = 2;
+		DogForm->dogsTree->Items->Item[2]->SelectedIndex = 3;
+}
+//---------------------------------------------------------------------------
+

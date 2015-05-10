@@ -9,7 +9,7 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <jpeg.hpp>
-
+//#include "Unit1.h"
 // ---------------------------------------------------------------------------
 class TdogeAdd : public TForm {
 __published: // IDE-managed Components

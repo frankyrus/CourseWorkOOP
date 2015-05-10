@@ -11578,7 +11578,7 @@ object DogForm: TDogForm
     00000000000000000000000000000000000000000000}
   Menu = MainMenu1
   OldCreateOrder = False
-  OnCreate = Cleartree1Click
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -11641,7 +11641,7 @@ object DogForm: TDogForm
       end
       object Cleartree1: TMenuItem
         Caption = 'Clear tree'
-        OnClick = Cleartree1Click
+        OnClick = init
       end
     end
     object Help1: TMenuItem
@@ -11658,7 +11658,7 @@ object DogForm: TDogForm
     Left = 744
     Top = 8
     Bitmap = {
-      494C010104008800A00020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104008800A40020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
