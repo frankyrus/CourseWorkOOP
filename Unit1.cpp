@@ -49,7 +49,12 @@ void __fastcall TDogForm::Open1Click(TObject *Sender) {
 	if (OpenDialog1->Execute())
 		if (FileExists(OpenDialog1->FileName)) {
 			dogsTree->LoadFromFile(OpenDialog1->FileName);
-			init();
+			DogForm->dogsTree->Items->Item[0]->ImageIndex = 0;
+			DogForm->dogsTree->Items->Item[0]->SelectedIndex = 3;
+			DogForm->dogsTree->Items->Item[1]->ImageIndex = 1;
+			DogForm->dogsTree->Items->Item[1]->SelectedIndex = 3;
+			DogForm->dogsTree->Items->Item[2]->ImageIndex = 2;
+			DogForm->dogsTree->Items->Item[2]->SelectedIndex = 3;
 		}
 
 }
