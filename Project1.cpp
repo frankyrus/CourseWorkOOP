@@ -4,16 +4,17 @@
 #pragma hdrstop
 #include <tchar.h>
 // ---------------------------------------------------------------------------
-USEFORM("Unit2.cpp", dogeAdd);
 USEFORM("Unit1.cpp", DogForm);
-
-// ---------------------------------------------------------------------------
+USEFORM("Unit2.cpp", dogeAdd);
+USEFORM("ABOUT.cpp", AboutBox);
+//---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int) {
 	try {
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
 		// Application->CreateForm(__classid(TForm2), &Form2);
 		Application->CreateForm(__classid(TDogForm), &DogForm);
+		Application->CreateForm(__classid(TAboutBox), &AboutBox);
 		Application->Run();
 	}
 	catch (Exception &exception) {

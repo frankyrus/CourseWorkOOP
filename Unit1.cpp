@@ -5,6 +5,7 @@
 
 #include "Unit1.h"
 #include "Unit2.h"
+#include "ABOUT.h"
 // ---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -12,6 +13,7 @@ TDogForm *DogForm;
 TTreeNode * nodFight;
 TTreeNode * nodToy;
 TTreeNode * nodWork;
+
 //
 // ---------------------------------------------------------------------------
 __fastcall TDogForm::TDogForm(TComponent* Owner) : TForm(Owner) {
@@ -50,8 +52,8 @@ void __fastcall TDogForm::Open1Click(TObject *Sender) {
 // ---------------------------------------------------------------------------
 
 void __fastcall TDogForm::Clear1Click(TObject *Sender) {
-	if (MessageDlg("Вы действительно хотите очистить каталог?",mtConfirmation,TMsgDlgButtons() << mbOK << mbCancel,0)== mrOk)
-		{
+	if (MessageDlg("Вы действительно хотите очистить каталог?", mtConfirmation,
+		TMsgDlgButtons() << mbOK << mbCancel, 0) == mrOk) {
 		dogsTree->Items->Clear();
 		nodFight = dogsTree->Items->Add(NULL, "Бойцовые");
 		nodFight->ImageIndex = 0;
@@ -62,9 +64,9 @@ void __fastcall TDogForm::Clear1Click(TObject *Sender) {
 		TTreeNode * nodWork = dogsTree->Items->Add(NULL, "Служебные");
 		nodWork->ImageIndex = 2;
 		nodWork->SelectedIndex = 3;
-		Memo1->Visible=false;
-        Image1->Visible=false;
-		}
+		Memo1->Visible = false;
+		Image1->Visible = false;
+	}
 }
 // ---------------------------------------------------------------------------
 
@@ -75,9 +77,9 @@ void __fastcall TDogForm::Add1Click(TObject *Sender) {
 // ---------------------------------------------------------------------------
 
 void __fastcall TDogForm::dogsTreeChange(TObject *Sender, TTreeNode *Node) {
-	if (dogsTree->Selected != dogsTree->Items->Item[0]) {
-		if (dogsTree->Selected != dogsTree->Items->Item[1]) {
-			if (dogsTree->Selected != dogsTree->Items->Item[2]) {
+	if (dogsTree->Selected != nodFight) {
+		if (dogsTree->Selected != nodToy) {
+			if (dogsTree->Selected != nodWork) {
 				Memo1->Lines->LoadFromFile(dogsTree->Selected->Text);
 				Image1->Picture->LoadFromFile(dogsTree->Selected->Text +
 					".jpg");
@@ -89,33 +91,36 @@ void __fastcall TDogForm::dogsTreeChange(TObject *Sender, TTreeNode *Node) {
 	else {
 		Memo1->Visible = false;
 		Image1->Visible = false;
-    }
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TDogForm::FormCreate(TObject *Sender) {
+	dogsTree->Items->Clear();
+	nodFight = dogsTree->Items->Add(NULL, "Бойцовые");
+	nodFight->ImageIndex = 0;
+	nodFight->SelectedIndex = 3;
+	nodToy = dogsTree->Items->Add(NULL, "Декоративные");
+	nodToy->ImageIndex = 1;
+	nodToy->SelectedIndex = 3;
+	nodWork = dogsTree->Items->Add(NULL, "Служебные");
+	nodWork->ImageIndex = 2;
+	nodWork->SelectedIndex = 3;
 }
 // ---------------------------------------------------------------------------
-void __fastcall TDogForm::FormCreate(TObject *Sender)
-{
-		dogsTree->Items->Clear();
-		nodFight = dogsTree->Items->Add(NULL, "Бойцовые");
-		nodFight->ImageIndex = 0;
-		nodFight->SelectedIndex = 3;
-		TTreeNode * nodToy = dogsTree->Items->Add(NULL, "Декоративные");
-		nodToy->ImageIndex = 1;
-		nodToy->SelectedIndex = 3;
-		TTreeNode * nodWork = dogsTree->Items->Add(NULL, "Служебные");
-		nodWork->ImageIndex = 2;
-		nodWork->SelectedIndex = 3;
-}
-//---------------------------------------------------------------------------
 
-
-void __fastcall TDogForm::Delete1Click(TObject *Sender)
-{
-if (MessageDlg("Вы действительно хотите удалить запись?",mtConfirmation,TMsgDlgButtons() << mbOK << mbCancel,0)== mrOk)
-		{
+void __fastcall TDogForm::Delete1Click(TObject *Sender) {
+	if (MessageDlg("Вы действительно хотите удалить запись?", mtConfirmation,
+		TMsgDlgButtons() << mbOK << mbCancel, 0) == mrOk) {
 		DeleteFile(dogsTree->Selected->Text);
 		DeleteFile(dogsTree->Selected->Text + ".jpg");
 		dogsTree->Selected->Delete();
-		}
+	}
+}
+// ---------------------------------------------------------------------------
+void __fastcall TDogForm::About1Click(TObject *Sender)
+{
+   AboutBox->ShowModal();
 }
 //---------------------------------------------------------------------------
 

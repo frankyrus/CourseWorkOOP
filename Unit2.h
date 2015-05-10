@@ -9,30 +9,30 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <jpeg.hpp>
-//#include "Unit1.h"
+
+// #include "Unit1.h"
 // ---------------------------------------------------------------------------
 class TdogeAdd : public TForm {
 __published: // IDE-managed Components
+	TLabel *WeightLabel;
+	TLabel *LifeLabel;
+	TLabel *TallLabel;
+	TComboBox *BreedComboBox;
+	TLabel *QualityLabel;
+	TLabel *BreedLabel;
+	TEdit *BreedEdit;
+	TEdit *LifeEdit;
+	TEdit *TallEdit;
+	TEdit *WeightEdit;
+	TEdit *QualityEdit;
+	TLabel *AboutLabel;
+	TMemo *AboutMemo;
+	TButton *AddButton;
+	TButton *ImageButton;
+	TImage *DogSmallImage;
 
-	TLabel *Label1;
-	TLabel *Label2;
-	TLabel *Label3;
-	TComboBox *ComboBox1;
-	TLabel *Label4;
-	TLabel *Label5;
-	TEdit *Edit1;
-	TEdit *Edit2;
-	TEdit *Edit3;
-	TEdit *Edit4;
-	TEdit *Edit5;
-	TLabel *Label6;
-	TMemo *Memo1;
-	TButton *Button1;
-	TButton *Button2;
-	TImage *Image1;
-
-	void __fastcall Button1Click(TObject *Sender);
-	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall AddButtonClick(TObject *Sender);
+	void __fastcall ImageButtonClick(TObject *Sender);
 
 private: // User declarations
 		public : // User declarations

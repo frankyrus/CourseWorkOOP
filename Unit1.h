@@ -96,12 +96,16 @@ __published: // IDE-managed Components
 	TMenuItem *Add1;
 	TMenuItem *Delete1;
 	TTreeView *dogsTree;
-	TImageList *dogsImages;
+	TImageList *DogsImages;
 	TOpenDialog *OpenDialog1;
 	TSaveDialog *SaveDialog1;
 	TMenuItem *Cleartree1;
 	TMemo *Memo1;
 	TImage *Image1;
+	TPopupMenu *PopupMenu1;
+	TMenuItem *N2;
+	TMenuItem *N3;
+	TMenuItem *N4;
 
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);
@@ -111,6 +115,7 @@ __published: // IDE-managed Components
 	void __fastcall dogsTreeChange(TObject *Sender, TTreeNode *Node);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Delete1Click(TObject *Sender);
+	void __fastcall About1Click(TObject *Sender);
 
 private: // User declarations
 		public : // User declarations

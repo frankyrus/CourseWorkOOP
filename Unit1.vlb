@@ -44,9 +44,6 @@ Coordinates=290,111,75,36
 [OpenDialog1]
 Coordinates=191,130,90,36
 
-[dogsImages]
-Coordinates=403,1,84,36
-
 [dogsTree]
 Coordinates=200,30,79,58
 Visible=True
@@ -54,4 +51,7 @@ ExplicitSubNodes=ShowButtons
 
 [(TMenuItem)]
 Coordinates=295,204,88,36
+
+[DogsImages]
+Coordinates=403,1,84,36
 
