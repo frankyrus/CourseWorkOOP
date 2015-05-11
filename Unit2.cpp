@@ -25,7 +25,8 @@ void __fastcall TdogeAdd::AddButtonClick(TObject *Sender) {
 		DogForm->dogsTree->Items->AddChild(nodWork, BreedEdit->Text);
 	}
 	if (LifeEdit->Text != "") {
-		AboutMemo->Lines->Insert(0, "Продолжительность жизни: " + LifeEdit->Text);
+		AboutMemo->Lines->Insert(0, "Продолжительность жизни: " +
+			LifeEdit->Text);
 	}
 	if (TallEdit->Text != "") {
 		AboutMemo->Lines->Insert(1, "Рост (в холке): " + TallEdit->Text);
@@ -54,6 +55,7 @@ void __fastcall TdogeAdd::ImageButtonClick(TObject *Sender) {
 	DogForm->OpenDialog1->Filter = "Image files (*.jpg)|*.JPG";
 	if (DogForm->OpenDialog1->Execute())
 		if (FileExists(DogForm->OpenDialog1->FileName))
-			DogSmallImage->Picture->LoadFromFile(DogForm->OpenDialog1->FileName);
+			DogSmallImage->Picture->LoadFromFile
+				(DogForm->OpenDialog1->FileName);
 }
 // ---------------------------------------------------------------------------

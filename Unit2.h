@@ -14,6 +14,7 @@
 // ---------------------------------------------------------------------------
 class TdogeAdd : public TForm {
 __published: // IDE-managed Components
+
 	TLabel *WeightLabel;
 	TLabel *LifeLabel;
 	TLabel *TallLabel;

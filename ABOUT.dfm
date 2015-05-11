@@ -2,7 +2,7 @@ object AboutBox: TAboutBox
   Left = 200
   Top = 108
   BorderStyle = bsDialog
-  Caption = 'About'
+  Caption = 'Wow!'
   ClientHeight = 213
   ClientWidth = 298
   Color = clBtnFace
@@ -173,8 +173,8 @@ object AboutBox: TAboutBox
     object Comments: TLabel
       Left = 31
       Top = 115
-      Width = 233
-      Height = 69
+      Width = 206
+      Height = 23
       Caption = 'Wow! Such work! Very cool'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText

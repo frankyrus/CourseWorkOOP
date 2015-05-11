@@ -5,6 +5,7 @@
 
 #include "Unit1.h"
 #include "Unit2.h"
+#include "Unit3.h"
 #include "ABOUT.h"
 // ---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -112,15 +113,23 @@ void __fastcall TDogForm::FormCreate(TObject *Sender) {
 void __fastcall TDogForm::Delete1Click(TObject *Sender) {
 	if (MessageDlg("Вы действительно хотите удалить запись?", mtConfirmation,
 		TMsgDlgButtons() << mbOK << mbCancel, 0) == mrOk) {
+		if ((dogsTree->Selected != nodFight) && ((dogsTree->Selected != nodToy)
+			&& (dogsTree->Selected != nodWork))) {
 		DeleteFile(dogsTree->Selected->Text);
 		DeleteFile(dogsTree->Selected->Text + ".jpg");
 		dogsTree->Selected->Delete();
 	}
+	else MessageDlg("Удаление ключевой ветви невозможно",mtWarning,TMsgDlgButtons() << mbOK,0);
+}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TDogForm::About1Click(TObject *Sender) {
+	AboutBox->ShowModal();
 }
 // ---------------------------------------------------------------------------
-void __fastcall TDogForm::About1Click(TObject *Sender)
-{
-   AboutBox->ShowModal();
-}
-//---------------------------------------------------------------------------
 
+void __fastcall TDogForm::N5Click(TObject *Sender) {
+	SearchForm->ShowModal();
+}
+// ---------------------------------------------------------------------------

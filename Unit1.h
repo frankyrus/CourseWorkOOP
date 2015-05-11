@@ -106,6 +106,8 @@ __published: // IDE-managed Components
 	TMenuItem *N2;
 	TMenuItem *N3;
 	TMenuItem *N4;
+	TMenuItem *N5;
+	TMenuItem *N6;
 
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);
@@ -116,6 +118,7 @@ __published: // IDE-managed Components
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Delete1Click(TObject *Sender);
 	void __fastcall About1Click(TObject *Sender);
+	void __fastcall N5Click(TObject *Sender);
 
 private: // User declarations
 		public : // User declarations
