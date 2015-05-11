@@ -115,12 +115,19 @@ void __fastcall TDogForm::Delete1Click(TObject *Sender) {
 		TMsgDlgButtons() << mbOK << mbCancel, 0) == mrOk) {
 		if ((dogsTree->Selected != nodFight) && ((dogsTree->Selected != nodToy)
 			&& (dogsTree->Selected != nodWork))) {
-		DeleteFile(dogsTree->Selected->Text);
-		DeleteFile(dogsTree->Selected->Text + ".jpg");
-		dogsTree->Selected->Delete();
+			DeleteFile(dogsTree->Selected->Text);
+			DeleteFile(dogsTree->Selected->Text + ".jpg");
+			dogsTree->Selected->Delete();
+			Memo1->Visible = false;
+			Image1->Visible = false;
+			Memo1->Clear();
+			Image1->Picture->Bitmap->FreeImage();
+			Image1->Picture->Bitmap = NULL;
+		}
+		else
+			MessageDlg("Удаление ключевой ветви невозможно", mtWarning,
+			TMsgDlgButtons() << mbOK, 0);
 	}
-	else MessageDlg("Удаление ключевой ветви невозможно",mtWarning,TMsgDlgButtons() << mbOK,0);
-}
 }
 
 // ---------------------------------------------------------------------------

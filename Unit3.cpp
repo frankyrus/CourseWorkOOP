@@ -45,6 +45,6 @@ void __fastcall TSearchForm::FormClose(TObject *Sender, TCloseAction &Action) {
 	FindedImage->Picture->Bitmap->FreeImage();
 	FindedImage->Picture->Bitmap = NULL;
 	FindedMemo->Clear();
-	BreedEdit->Text="";
+	BreedEdit->Text = "";
 }
 // ---------------------------------------------------------------------------
