@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.195,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.h=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Unit1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.561,=C:\Users\frank_000\Downloads\79_e6c2419c4d.jpg</Transaction>
     <Transaction>1899.12.30 00:00:00.000.640,C:\Users\frank_000\Downloads\79_e6c2419c4d.jpg=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.746,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Project1PCH1.h=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.955,=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\Unit2.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.195,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.h=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.638,C:\Users\frank_000\Documents\Projects\CourseWorkOOP\.git\Project1.cbproj=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.cpp=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.195,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.786,=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\ABOUT.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.195,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.cpp=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Unit1.dfm=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Unit1.cpp=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.061,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Project1.cbproj=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.061,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.640,C:\Users\frank_000\Documents\Projects\CourseWorkOOP\.git\Project1.cbproj=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.955,=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.195,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.746,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Project1PCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.645,=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.195,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.dfm=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.689,=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.638,C:\Users\frank_000\Documents\Projects\CourseWorkOOP\Project1.cbproj=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\.git\Project1.cbproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.650,=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\Unit3.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.640,C:\Users\frank_000\Documents\Projects\CourseWorkOOP\Project1.cbproj=C:\Users\frank_000\Documents\Projects\CourseWorkOOP\.git\Project1.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.289,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Project1.cbproj=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Project1.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Unit1.h=C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Unit1.dfm=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.289,C:\Users\frank_000\Google Диск\Документы\Семестр 4\Курсач\Project1.cbproj=C:\Users\frank_000\Documents\Embarcadero\Studio\Projects\CourseWork\Project1.cbproj</Transaction>
   </Transactions>
 </BorlandProject>

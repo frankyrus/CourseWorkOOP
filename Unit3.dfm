@@ -11602,6 +11602,8 @@ object SearchForm: TSearchForm
     Top = 276
     Width = 385
     Height = 273
+    ReadOnly = True
+    ScrollBars = ssVertical
     TabOrder = 0
     Visible = False
   end
