@@ -11587,6 +11587,7 @@ object SearchForm: TSearchForm
     Top = 53
     Width = 385
     Height = 217
+    Proportional = True
     Visible = False
   end
   object BreedLabel: TLabel

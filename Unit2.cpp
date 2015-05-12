@@ -9,6 +9,8 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 
+bool pressed;
+
 // ---------------------------------------------------------------------------
 __fastcall TdogeAdd::TdogeAdd(TComponent* Owner) : TForm(Owner) {
 }
@@ -38,8 +40,11 @@ void __fastcall TdogeAdd::AddButtonClick(TObject *Sender) {
 		AboutMemo->Lines->Insert(3, "Качества: " + QualityEdit->Text);
 	}
 	AboutMemo->Lines->SaveToFile(BreedEdit->Text);
-	if (DogSmallImage->Picture->Bitmap != NULL) {
+	if (pressed == false) {
 		DogSmallImage->Picture->LoadFromFile("DefaultDog.jpg");
+		DogSmallImage->Picture->SaveToFile(BreedEdit->Text + ".jpg");
+	}
+	else {
 		DogSmallImage->Picture->SaveToFile(BreedEdit->Text + ".jpg");
 	}
 	BreedEdit->Text = "";
@@ -50,10 +55,12 @@ void __fastcall TdogeAdd::AddButtonClick(TObject *Sender) {
 	AboutMemo->Clear();
 	DogSmallImage->Picture->Bitmap->FreeImage();
 	DogSmallImage->Picture->Bitmap = NULL;
+	pressed = false;
 }
 // ---------------------------------------------------------------------------
 
 void __fastcall TdogeAdd::ImageButtonClick(TObject *Sender) {
+	pressed = true;
 	DogForm->OpenDialog1->Title = "Open File...";
 	DogForm->OpenDialog1->Filter =
 		"Image files (*.jpg)|*.JPG|Image files (*.jpeg)|*.JPEG|";
