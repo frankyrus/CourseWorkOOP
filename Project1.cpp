@@ -6,8 +6,8 @@
 // ---------------------------------------------------------------------------
 USEFORM("Unit1.cpp", DogForm);
 USEFORM("Unit2.cpp", dogeAdd);
-USEFORM("ABOUT.cpp", AboutBox);
 USEFORM("Unit3.cpp", SearchForm);
+USEFORM("ABOUT.cpp", AboutBox);
 
 // ---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int) {

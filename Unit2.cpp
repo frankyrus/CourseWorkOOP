@@ -38,7 +38,10 @@ void __fastcall TdogeAdd::AddButtonClick(TObject *Sender) {
 		AboutMemo->Lines->Insert(3, "Качества: " + QualityEdit->Text);
 	}
 	AboutMemo->Lines->SaveToFile(BreedEdit->Text);
-	DogSmallImage->Picture->SaveToFile(BreedEdit->Text + ".jpg");
+	if (DogSmallImage->Picture->Bitmap != NULL) {
+		DogSmallImage->Picture->LoadFromFile("DefaultDog.jpg");
+		DogSmallImage->Picture->SaveToFile(BreedEdit->Text + ".jpg");
+	}
 	BreedEdit->Text = "";
 	LifeEdit->Text = "";
 	TallEdit->Text = "";
@@ -52,7 +55,8 @@ void __fastcall TdogeAdd::AddButtonClick(TObject *Sender) {
 
 void __fastcall TdogeAdd::ImageButtonClick(TObject *Sender) {
 	DogForm->OpenDialog1->Title = "Open File...";
-	DogForm->OpenDialog1->Filter = "Image files (*.jpg)|*.JPG";
+	DogForm->OpenDialog1->Filter =
+		"Image files (*.jpg)|*.JPG|Image files (*.jpeg)|*.JPEG|";
 	if (DogForm->OpenDialog1->Execute())
 		if (FileExists(DogForm->OpenDialog1->FileName))
 			DogSmallImage->Picture->LoadFromFile

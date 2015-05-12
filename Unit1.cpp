@@ -28,25 +28,36 @@ void __fastcall TDogForm::Exit1Click(TObject *Sender) {
 
 void __fastcall TDogForm::Save1Click(TObject *Sender) {
 	SaveDialog1->Title = "Save File..."; // заголовок окна
-	SaveDialog1->Filter = "Dog files (*.dat)|*.DAT"; // шаблон имени файла
+	SaveDialog1->Filter = "Dog files (*.dog)|*.DOG"; // шаблон имени файла
 	if (SaveDialog1->Execute())
-		dogsTree->SaveToFile(SaveDialog1->FileName);
+		dogsTree->SaveToFile(SaveDialog1->FileName + ".dog");
 
 }
 // ---------------------------------------------------------------------------
 
 void __fastcall TDogForm::Open1Click(TObject *Sender) {
 	OpenDialog1->Title = "Open File..."; // заголовок окна
-	OpenDialog1->Filter = "Dog files (*.dat)|*.DAT"; // шаблон имени файла
+	OpenDialog1->Filter = "Dog files (*.dog)|*.DOG"; // шаблон имени файла
 	if (OpenDialog1->Execute())
 		if (FileExists(OpenDialog1->FileName)) {
 			dogsTree->LoadFromFile(OpenDialog1->FileName);
-			DogForm->dogsTree->Items->Item[0]->ImageIndex = 0;
-			DogForm->dogsTree->Items->Item[0]->SelectedIndex = 3;
-			DogForm->dogsTree->Items->Item[1]->ImageIndex = 1;
-			DogForm->dogsTree->Items->Item[1]->SelectedIndex = 3;
-			DogForm->dogsTree->Items->Item[2]->ImageIndex = 2;
-			DogForm->dogsTree->Items->Item[2]->SelectedIndex = 3;
+			for (int i = 0; i < dogsTree->Items->Count; i++) {
+				if (dogsTree->Items->Item[i]->Text == "Бойцовые") {
+					nodFight = dogsTree->Items->Item[i];
+					nodFight->ImageIndex = 0;
+					nodFight->SelectedIndex = 3;
+				}
+				if (dogsTree->Items->Item[i]->Text == "Декоративные") {
+					nodToy = dogsTree->Items->Item[i];
+					nodToy->ImageIndex = 1;
+					nodToy->SelectedIndex = 3;
+				}
+				if (dogsTree->Items->Item[i]->Text == "Служебные") {
+					nodWork = dogsTree->Items->Item[i];
+					nodWork->ImageIndex = 2;
+					nodWork->SelectedIndex = 3;
+				}
+			}
 		}
 
 }
@@ -81,11 +92,15 @@ void __fastcall TDogForm::dogsTreeChange(TObject *Sender, TTreeNode *Node) {
 	if (dogsTree->Selected != nodFight) {
 		if (dogsTree->Selected != nodToy) {
 			if (dogsTree->Selected != nodWork) {
-				Memo1->Lines->LoadFromFile(dogsTree->Selected->Text);
-				Image1->Picture->LoadFromFile(dogsTree->Selected->Text +
-					".jpg");
-				Memo1->Visible = true;
-				Image1->Visible = true;
+				try {
+					Memo1->Lines->LoadFromFile(dogsTree->Selected->Text);
+					Image1->Picture->LoadFromFile
+						(dogsTree->Selected->Text + ".jpg");
+					Memo1->Visible = true;
+					Image1->Visible = true;
+				}
+				catch (...) {
+				}
 			}
 		}
 	}

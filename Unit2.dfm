@@ -11627,6 +11627,7 @@ object dogeAdd: TdogeAdd
     Top = 8
     Width = 99
     Height = 99
+    Proportional = True
   end
   object BreedComboBox: TComboBox
     Left = 31

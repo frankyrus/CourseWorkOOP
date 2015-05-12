@@ -1,7 +1,7 @@
 object DogForm: TDogForm
   Left = 0
   Top = 0
-  Caption = #1057#1086#1073#1072#1082#1077#1085#1099
+  Caption = #1050#1072#1090#1072#1083#1086#1075' '#1087#1086#1088#1086#1076' '#1089#1086#1073#1072#1082
   ClientHeight = 502
   ClientWidth = 713
   Color = clWindow
@@ -11588,6 +11588,7 @@ object DogForm: TDogForm
     Top = 7
     Width = 385
     Height = 217
+    Proportional = True
     Visible = False
   end
   object dogsTree: TTreeView
@@ -11610,7 +11611,6 @@ object DogForm: TDogForm
     SortType = stText
     TabOrder = 0
     OnChange = dogsTreeChange
-    ExplicitTop = 1
   end
   object Memo1: TMemo
     Left = 327
@@ -11785,7 +11785,7 @@ object DogForm: TDogForm
     Left = 328
     Top = 208
     Bitmap = {
-      494C010104008800B00020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104008800B40020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
